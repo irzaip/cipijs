@@ -21,17 +21,17 @@ bot.sort_replies()
 
 app = Flask(__name__)
 
-@app.route('/favicon.ico')
+@app.route('/tftest/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
-@app.route('tftest/<string:page_name>/')
+@app.route('/tftest/<string:page_name>/')
 def static_page(page_name):
     return render_template('%s.html' % page_name)
 
-@app.route("tftest/reply", methods=["POST"])
+@app.route("/tftest/reply", methods=["POST"])
 def reply():
     """Fetch a reply from RiveScript.
 
@@ -77,7 +77,7 @@ def reply():
     })
 
 
-@app.route("tftest/tenor",methods=["POST"])
+@app.route("/tftest/tenor",methods=["POST"])
 def giphy():
     params = request.json
     if not params:
