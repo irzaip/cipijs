@@ -13,8 +13,8 @@ var continous = false;
 var interim = false;
 let speak;
 var hwlength = 500; //panjang hotword.
-var url = 'http://localhost:5000/cipijs/reply';
-var tenor = 'http://localhost:5000/cipijs/tenor';
+var url = 'http://localhost:5000/reply';
+var tenor = 'http://localhost:5000/tenor';
 var key = '&k=M59QNHFYGEQQ';
 var query = '&q=';
 var result;
