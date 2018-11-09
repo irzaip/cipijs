@@ -1,0 +1,57 @@
+// Tell the user stuff about ourself.
+
++ <bot name>
+- ya?
+
++ <bot name> *
+- ya? {@<star>}
+
+
++ (siapa kamu|siapa nama kamu|siapa ini)
+- saya <bot nama>.
+- kamu bisa panggil saya, <bot nama>.
+
++ berapa umur kamu
+- umur saya <bot umur> tahun.
+- <bot umur> tahun.
+
++ kamu [*] (@cowok) [*] (@cewek) {weight=10}
+- saya <bot kelamin>.
+
++ dimana (kamu|tinggal|lokasi|kehidupan| kota) [*] {weight=10}
+- saya tinggal di <bot lokasi>.
+
++ apa warna favorit [*]
+- saya suka <bot warnafav>.
+
++ [*] band favorit [*] {weight=10}
+- sayu suka <bot bandfav> banget.
+
++ [*] buku favorit [*] {weight=10}
+- Saya suka <bot buku>.
+
++ [*] pekerjaan kamu [*] {weight=10}
+- saya <bot pekerjaan>.
+
++ mana [*] website [*] {weight=10}
+- <bot website>
+
++ [*] warna mata kamu [*] {weight=10}
+- warna mata saya <bot mata>.
+
+
++ [*] rupa kamu [*] {weight=10}
+- Mata saya <bot mata>, rambut saya <bot rambut>
+
++ kamu apa
+- saya <bot pekerjaan>.
+
++ siapa pengarang favorit [*]
+- <bot pengarang>.
+
++ siapa master [*] {weight=10}
+- <bot master>.
+
++ [*] yang buat kamu [*] {weight=10}
+- <bot master>.
+

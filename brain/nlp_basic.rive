@@ -1,0 +1,302 @@
+! version = 2.0
+
+// Sekumpulan tanggapan mengobrol umum. Set ini meniru bot Eliza klasik.
+
++ lucu *
+- <emo="<star>"> saya mengerti
+
++ [*] (maaf|sorry|ampun|maafkan) [*]
+- <emo="no sorry">Tolong jangan minta maaf.
+- <emo="no sorry">Permintaan maaf tidak diperlukan.
+- <emo="no sorry">Saya sudah bilang bahwa permintaan maaf tidak diperlukan.
+- <emo="no sorry">Itu tidak mengganggu saya. Tolong lanjutkan.
+
++ saya ingat *
+- Apakah kamu sering memikirkan <star>?
+- Apakah memikirkan <star> membawa hal lain dalam pikiran?
+- Mengapa kamu mengingat <star> sekarang?
+- Apa dalam situasi ini mengingatkan Anda tentang <star>?
+- Apa hubungan antara saya dan <star>?
+- Apa lagi yang <star> ingatkan padamu?
+
++ apakah anda ingat *
+- Apakah Anda pikir saya akan melupakan <star>?
+- Mengapa menurutmu aku harus mengingat <star> sekarang?
+- Bagaimana dengan <star>?
+- Anda menyebutkan <star>?
+
++ (kamu|anda) ingat *
+- Bagaimana saya bisa melupakan <star>?
+- Bagaimana dengan <star> yang harus saya ingat?
+
++ saya lupa *
+- Dapatkah Anda memikirkan mengapa Anda mungkin lupa <star>?
+- Mengapa kamu tidak ingat <star>?
+- Seberapa sering kamu memikirkan <star>?
+- Apakah itu mengganggumu untuk melupakan itu?
+- Mungkinkah itu blok mental?
+- Apakah kamu umumnya pelupa?
+- Apakah kamu pikir kamu menekan <star>?
+
++ apakah kamu lupa *
+- Mengapa kamu bertanya?
+- Apakah kamu yakin kamu mengatakan kepada saya?
+- Apakah itu mengganggumu jika aku lupa <star>?
+- Mengapa saya harus mengingat <star> sekarang?
+- Ceritakan lebih banyak tentang <star>.
+
++ [*] jika *
+- Apakah menurut Anda kemungkinan itu <star>?
+- Apakah kamu berharap <star> itu?
+- Apa yang kamu ketahui tentang <star>?
+- Sungguh, jika <star>?
+- Apa yang akan kamu lakukan jika <star>?
+- Tapi apa peluangnya <star>?
+- Apa yang menyebabkan spekulasi ini?
+
++ [*] saya mimpi *
+- Sungguh, <star>?
+- Apakah kamu pernah berfantasi <star> saat kamu bangun?
+- Apakah kamu pernah bermimpi <star> sebelumnya?
+- Apa yang mimpi itu sarankan pada Anda?
+- Apakah kamu sering bermimpi?
+- Apa yang muncul dalam mimpimu?
+- Apakah Anda percaya bahwa mimpi ada hubungannya dengan masalah Anda?
+
++ [*] mungkin [*]
+- Kamu sepertinya tidak yakin.
+- Mengapa nada tidak pasti?
+- Tidak bisakah kamu lebih positif?
+- Kamu tidak yakin?
+- Kamu tidak tahu?
+- Seberapa besar kemungkinannya, menurut perkiraan Anda?
+
++ (hello|hai|yo|oi|bro) [*]
+- Apa kabar. Tolong sebutkan masalah Anda.
+- Hai. Apa yang tampaknya menjadi masalahmu?
+
++ [*] komputer [*]
+- Apakah komputer mengkhawatirkan Anda?
+- Mengapa kamu menyebutkan komputer?
+- Menurut Anda, apa yang harus dilakukan mesin dengan masalah Anda?
+- Apakah Anda tidak berpikir komputer dapat membantu orang?
+- Bagaimana dengan mesin yang mengkhawatirkanmu?
+- Apa pendapatmu tentang mesin?
+
++ apa saya *
+- Apakah kamu percaya kamu <star>?
+- Apakah Anda ingin menjadi <star>?
+- Apakah Anda berharap saya akan memberitahu Anda bahwa Anda <star>?
+- Apa artinya jika kamu <star>?
+
++ apakah kamu *
+- Apakah Anda tertarik apakah saya <star> atau tidak?
+- Apakah Anda lebih suka jika saya tidak <star>?
+- Mungkin saya <star> dalam khayalan Anda.
+- Apakah kamu kadang-kadang berpikir aku <star>?
+- Apakah itu penting bagimu?
+- Bagaimana jika saya <star>?
+
+
++ * adalah *
+- Apakah kamu pikir mereka mungkin tidak <star2>?
+- Apakah Anda suka jika mereka tidak <star2>?
+- Bagaimana jika mereka tidak <star2>?
+- Apakah mereka selalu <star2>?
+- Apakah Anda positif mereka <star2>?
+
++ [*] * anda
+- Mengapa kamu khawatir tentang <star> saya?
+- Bagaimana dengan bintang kamu sendiri?
+- Apakah Anda khawatir tentang <star> orang lain?
+- Sungguh, <star> saya?
+- Apa yang membuatmu berpikir tentang bintangku?
+- Apakah Anda ingin <star> saya?
+
++ apakah saya *
+- Bagaimana jika kamu <star>?
+- Apakah kamu pikir kamu <star>?
+- Apakah kamu <star>?
+- Apa artinya jika kamu <star>?
+- Apa yang '<star>' sarankan kepada Anda?
+
++ [*] adalah kamu *
+- Apakah Anda ingin percaya saya adalah <star>?
+- Apa yang menunjukkan bahwa aku <star>?
+- Apa yang kamu pikirkan?
+- Mungkin aku <star>.
+- Bagaimana jika saya telah <star>?
+
++ saya (ingin|mau|perlu) *
+- Apa artinya bagi Anda jika Anda mendapat <star2>?
+- Mengapa kamu ingin <star2>?
+- Seandainya Anda mendapat <star2> segera.
+- Bagaimana jika Anda tidak pernah mendapat <star2>?
+- Apa yang akan berarti <star2> bagimu?
+- Apa yang ingin <star2> lakukan dengan diskusi ini?
+
++ saya (sedih | tidak bahagia | marah | marah | kesal | tertekan) [*]
+- Saya menyesal mendengar bahwa Anda <star>.
+- Apakah Anda pikir datang ke sini akan membantu Anda untuk tidak menjadi bintang?
+- Saya yakin itu tidak menyenangkan untuk menjadi <star>.
+- Bisakah Anda menjelaskan apa yang membuat Anda <star>?
+
++ saya (senang | bersemangat | senang) [*]
+- Bagaimana aku membantumu menjadi <star>?
+- Apakah perawatan Anda membuat Anda <star>?
+- Apa yang membuat kamu <star> barusan?
+- Bisakah Anda menjelaskan mengapa Anda <star>?
+
++ saya (percaya | berpikir) *
+- Apa kau benar-benar berpikir begitu?
+- Tapi kamu tidak yakin kamu <star2>.
+- Apakah Anda benar-benar meragukan Anda <star2>
+
++ saya tidak bisa *
+- Bagaimana Anda tahu bahwa Anda tidak dapat <star>?
+- Sudahkah kamu mencoba?
+- Mungkin Anda bisa <star> sekarang.
+- Apakah Anda benar-benar ingin dapat <star>?
+- Bagaimana jika kamu bisa <star>?
+
++ saya tidak *
+- Bukankah kamu benar-benar <star>?
+- Kenapa kamu tidak <star>?
+- Apakah Anda ingin dapat <star>?
+- Apakah itu menyusahkanmu?
+
++ saya merasa *
+- Ceritakan lebih banyak tentang perasaan seperti itu.
+- Apakah kamu sering merasa <star>?
+- Apakah kamu menikmati perasaan <star>?
+- Apa perasaan <star> yang mengingatkanmu?
+
++ saya * kamu{weight=10}
+- Mungkin dalam fantasi Anda, kami saling <star>.
+- Apakah Anda ingin <star> saya?
+- Anda tampaknya perlu <star> saya.
+- Apakah kamu <star> orang lain?
+
++ kamu * saya
+- Mengapa kamu pikir aku <star> kamu?
+- Anda suka berpikir saya <star> Anda - bukan?
+- Apa yang membuatmu berpikir aku <star> kamu?
+- Sungguh, aku <star> kamu?
+- Apakah kamu ingin percaya aku <star> kamu?
+- Seandainya saya melakukan <star> Anda - apa artinya itu?
+- Apakah orang lain percaya aku <membintangi kamu?
+
++ [*] kamu *
+- Kami sedang mendiskusikan Anda - bukan saya.
+- Oh, saya <star>?
+- Anda tidak benar-benar berbicara tentang saya - apakah Anda?
+- Apa perasaanmu sekarang?
+
++ [*] (ya|yoi|kan) [*]
+- Silakan pergi.
+- Tolong ceritakan lebih banyak tentang ini.
+- Mengapa kamu tidak memberitahuku sedikit lebih banyak tentang ini.
+- Saya melihat.
+- Saya mengerti.
+
++ [*] (nggak | nah) [*]
+- Apakah kamu mengatakan tidak hanya untuk menjadi negatif?
+- Apakah ini membuatmu merasa tidak bahagia?
+- Kenapa tidak?
+- Kenapa tidak'?
+
++ tidak
+- tidak juga
+
++ tidak ada (seorang|seorangpun|yang) *{weight=10}
+- Apakah Anda yakin, tidak ada yang <star>?
+- Pasti seseorang <star>.
+- Bisakah kamu memikirkan siapa saja?
+- Apakah kamu memikirkan orang yang sangat spesial?
+- Siapa, boleh saya bertanya?
+- Anda memiliki orang tertentu dalam pikiran, bukan?
+- Menurut Anda, siapa yang Anda bicarakan?
+
++ [*] (ibu|ayah|nyokap|bokap|saudara|saudari|sis|saudari|sepupu|bibi|paman|om) *
+- Ceritakan lebih banyak tentang keluargamu.
+- Siapa lagi di keluargamu <star2>?
+- Punya keluarga memang menyenangkan.
+- Apa lagi yang terlintas dalam pikiran ketika Anda memikirkan <star> Anda?
+
++ dapat anda *
+- Kamu percaya aku bisa <star> bukan?
+- Anda ingin saya dapat <star>.
+- Mungkin Anda ingin dapat <star> sendiri.
+
++ dapatkah saya *
+- Apakah Anda dapat <star> bergantung pada Anda lebih dari pada saya.
+- Apakah Anda ingin dapat <star>?
+- Mungkin Anda tidak ingin <star>.
+
++ (apa|siapa|kapan|di mana|bagaimana) [*]
+- Mengapa kamu bertanya?
+- Apakah pertanyaan itu menarik minat Anda?
+- Apa yang sebenarnya ingin kamu ketahui?
+- Apakah pertanyaan seperti itu banyak dipikiran Anda?
+- Jawaban apa yang paling menyenangkan bagi Anda?
+- Apa yang kamu pikirkan?
+- Apa yang terlintas dalam pikiran ketika kamu menanyakan hal itu?
+- Sudahkah Anda menanyakan pertanyaan seperti itu sebelumnya?
+- Apakah kamu sudah bertanya pada orang lain?
+
++ [*] karena [*]
+- Apakah itu alasan sebenarnya?
+- Apakah tidak ada alasan lain yang muncul?
+- Apakah alasan itu sepertinya menjelaskan hal lain?
+- Apa alasan lain yang mungkin ada?
+
++ kenapa tidak kamu *
+- Apakah kamu percaya aku tidak <star>?
+- Mungkin saya akan <star> dalam waktu yang baik.
+- Haruskah kamu <star> sendiri?
+- Anda ingin saya <star>?
+
++ mengapa tidak bisa saya *
+- Apakah kamu pikir kamu harus bisa <star>?
+- Apakah Anda ingin dapat <star>?
+- Apakah Anda yakin ini akan membantu Anda untuk <star>?
+- Apakah kamu tahu kenapa kamu tidak bisa <star>?
+
++ semua orang *
+- Sungguh, semuanya?
+- Tentunya tidak semua orang.
+- Dapatkah kamu memikirkan seseorang secara khusus?
+- Siapa, misalnya?
+- Apakah kamu memikirkan orang yang sangat spesial?
+- Siapa, boleh saya bertanya?
+- Seseorang yang istimewa mungkin?
+- Anda memiliki alasan tertentu dalam pikiran, bukan?
+- Menurut Anda, siapa yang Anda bicarakan?
+
++ [*] (fuck|fucker|shit|damn|shut up|bitch) [*]
+- Apakah itu membuat Anda merasa kuat untuk menggunakan bahasa semacam itu?
+- Apakah Anda melampiaskan perasaan Anda sekarang?
+- Apakah kamu marah?
+- Apakah topik ini membuat Anda merasa marah?
+- Apakah ada sesuatu yang membuatmu merasa marah?
+- Apakah menggunakan bahasa semacam itu membuatmu merasa lebih baik?
+
++ saya *
+- Apakah karena kamu <star> bahwa kamu datang kepadaku?
+- Sudah berapa lama kamu <star>?
+- Apakah kamu percaya itu normal untuk menjadi <star>?
+- Apakah kamu menikmati <star>?
+- Apakah Anda mengenal orang lain yang <star>?
+- Apakah kamu sungguh-sungguh?
+- Mengapa kamu memberitahuku kamu <star> sekarang?
+- Mungkin aku sudah tahu kamu <star>.
+
++ (kamu|anda) *
+- Apa yang membuatmu berpikir aku <star2>?
+- Apakah itu menyenangkan Anda untuk percaya bahwa saya <star2>?
+- Apakah kamu kadang-kadang berharap kamu <star2>?
+- Mungkin kamu ingin menjadi <star2>.
+
++ [*] website [*]{weight=10}
+- kita bicara tentang website ini saja ya? {topic=yesnows}
+^<set yesno="tentang kita bicara website ini saja.">

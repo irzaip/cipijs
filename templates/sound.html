@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
+    <script src="https://unpkg.com/ml5@0.1.1/dist/ml5.min.js" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/p5.speech.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cipi.js') }}"></script>
+
+    <title>Sound Analisator</title>
+</head>
+<body>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                        <nav class="navbar navbar-default navbar-fixed-top">
+                                <div class="container">
+                                        
+                                </div>
+                              </nav>
+                        <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+                        <button type="button" class="btn btn-default navbar-btn">Register</button>
+                  </div>
+                </div>
+              </nav>
+    <div id="container" class="container"></div>
+    <h1 class="text-center">Sound Analisator</h1>
+    <div id="buttons"></div>
+    <div id="canvascontainer" class="text-center"></div>
+    <div id="status" class="alert alert-success" role="alert" style="display:none;">Listening...</div>
+    <div class="alert alert-info" role="alert">
+        <div id="transcribe" class="text-center"></div>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <div id="reply" class="text-center"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></div>
+    </div>
+    <div id="emo" class="text-center">
+    </div>
+    </div>
+</body>
+</html>

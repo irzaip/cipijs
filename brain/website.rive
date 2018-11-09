@@ -1,0 +1,172 @@
+! version = 2.0
+
+> topic website
+
+    + kamu siapa
+    - <emo="robot">saya adalah robot yang bisa menjelaskan website ini.
+    - <emo="me only">Saya akan berusaha menjelaskan kegunaan website ini.
+    - <emo="diplomacy">Saya robot diplomasi dari website ini.
+    - <emo="explain">saya akan menjelaskan website ini.
+    - <emo="me">apa isi website ini, saya yang akan menjelaskan
+
+    + kamu [*]
+    - <emo="you">anda bisa bertanya apa saja pada saya tentang website ini.
+    - <emo="ask me">apa yang belum anda ketahui tentang website ini?
+    - <emo="ask">apa yang ingin anda cari di website ini.
+
+    + [*] (jelas|jelaskan|maksud) [*] {weight=10}
+    - <emo="meaning">maksud dari website ini adalah merangkum\n 
+    ^ bermacam-macam interface yang menggunakan bahasa indonesia\n 
+    ^ sebagai antarmuka dengan komputer.
+
+    + [*] titanoboa [*]
+    - <emo="titanoboa">Titanoboa adalah sejenis ular, digunakan menjadi nama website ini\n
+    ^ berguna untuk merangkai bahasa sebagai antar-muka manusia dengan\n
+    ^ komputer.
+    - <emo="titanoboa">Titanoboa akan menguasai dunia dengan koneksi antar robot\n
+    ^ melalui koneksi antar internet.
+    - <emo="titanoboa">Titanoboa akan membantu anda merangkai robot dengan bahasa.
+
+    + [*] (cara|caranya) [*]
+    - <emo="easy">caranya gampang, besok, saya ajarin.
+    - <emo="connect">Anda akan berhubungan dengan website ini melalui suara yang biasa anda gunakan
+    - <emo="language">Robot ini akan berhubungan dengan anda melalui bahasa indonesia.
+    - <emo="robot">Nanti kita akan bikin sebuah robot yang besar sekali
+
+
+    + [*] kontak [*]
+    - <emo="irzaip">kontak pemilik website ini. yaitu Irza Pulungan
+    - <emo="irzaip">Hubungi irzaip@gmail.com
+    - <emo="irzaip">kontak irza Pulungan
+
+    + [*] pesan [*]
+    - <emo="order">anda dapat memesan bermacam-macam produk pada kami.
+    - <emo="order">anda bisa memesan bermacam layanan pada website ini kalau anda meninggalkan email anda.
+    - <emo="order">Silahkan tinggalkan email, nanti kami kontak anda.
+
+    + website [*] tentang [*]
+    - <emo="website">website ini tentang kata-kata interface
+    - <emo="website">website ini berguna untuk menterjemahkan bahasa mesin menjadi bahasa manusia
+
+    + [*] website [*]
+    - <emo="website">website ini berguna buat kamu
+    - <emo="website">website ini menjembatani mesin dengan manusia melalui bahasa indonesia.
+    - <emo="website">anda dapat memerintah apa saja melalui website ini.
+    - <emo="website">Selama anda bisa kontak ke website ini, anda bisa menguasai dunia.
+
+    + [*] (site|situs) [*]
+    - <emo="website">site ini asik banget
+    - <emo="website">Memang asik sekali.
+
+    + [*] (guna|gunanya) *
+    - <emo="artificial intellegence">sangat berguna sekali, kalau anda bisa ngobrol langsung dengan mesin komputer ataupun semacam kecerdasan buatan.
+    - <emo="artificial intellegence">kecerdasan buatan akan mengambil alih pekerjaan yang monoton dan membosankan sehingga manusia bisa hidup senang.
+    - <emo="artificial intellegence">kecerdasan buatan adalah alat untuk membantu manusia, bukan mencelakainya.
+
+    + mengapa *
+    - <emo="artificial intellegence">kadang manusia susah menggunakan atau mengendalikan robot, maka dengan interface ini akan menjadi mudah.
+    - <emo="artificial intellegence">kadang komunikasi yang paling cepat dengan mesin adalah berbicara langsung kepadanya.
+
+    + kapan *
+    - <emo="when">sejak <star>
+    - <emo="when">kami berusaha menghadirkan teknologi ini secepat mungkin
+
+    + dimana *
+    - <emo="where">di sini.
+    - <emo="where">di jakarta
+    
+    + di mana *
+    - tidak dimana-mana
+
+    + siapa [*]
+    - dia yang <star2>
+    - <emo="irzaip">silahkan kontak irza pulungan
+
+    + apa *
+    - <emo="robot">website ini menghubungkan robot
+    - <emo="robot">Robot itu keren, maka kita buat website ini.
+
+    + [*] robot [*]
+    - <emo="robot">robot memang akan menjadi masa depan.
+
+    + [*] kecerdasan [*]
+    - <emo="artificial intellegence">kecerdasan buatan akan menguasai dunia. Kami berusaha menjembataninya.
+
+    + [*] buatan [*]
+    - <emo="destroy">apa saja yang buatan itu pasti akan hancur.
+
+    + [*] menghubungkan [*]
+    - <emo="robot">kami memahami susahnya komunikasi dengan robot, oleh karena itu kami buat website ini.
+    - <emo="robot">Robot akan kami hubungkan dengan bantuan teknologi bahasa manusia.
+
+    + (terima kasih|makasih)
+    - <emo="thankyou">semoga bisa bermanfaat {topic=random}
+    - <emo="thankyou">Terima kasih kembali, datang lagi lain waktu{topic=random}
+    - <emo="thankyou">Sama-sama silahkan kembali lagi{topic=random}
+
+    + [*] bahasa [*]
+    - bahasa indonesia akan kami gunakan sepenuhnya menggunakan pembelajaran mesin dan teknologi kecerdasan buatan
+
+
+
+    + (siapa kamu|siapa nama kamu|siapa ini)
+    - saya <bot nama>.{topic=random}
+    - kamu bisa panggil saya, <bot nama>.{topic=random}
+
+    + berapa umur kamu
+    - umur saya <bot umur> tahun. {topic=random}
+    - <bot umur> tahun. {topic=random}
+
+    + kamu [*] (@cowok) [*] (@cewek) {weight=10}
+    - saya <bot kelamin>. {topic=random}
+
+    + dimana (kamu|tinggal|lokasi|kehidupan| kota) [*] {weight=10}
+    - saya tinggal di <bot lokasi>. {topic=random}
+
+    + apa warna favorit [*]
+    - saya suka <bot warnafav>. {topic=random}
+
+    + [*] band favorit [*] {weight=10}
+    - sayu suka <bot bandfav> banget. {topic=random}
+
+    + [*] buku favorit [*] {weight=10}
+    - Saya suka <bot buku>. {topic=random}
+
+    + [*] pekerjaan kamu [*] {weight=10}
+    - saya <bot pekerjaan>. {topic=random}
+
+    + mana [*] website [*] {weight=10}
+    - <bot website> {topic=random}
+
+    + [*] warna mata kamu [*] {weight=10}
+    - warna mata saya <bot mata>. {topic=random}
+
+
+    + [*] rupa kamu [*] {weight=10}
+    - Mata saya <bot mata>, rambut saya <bot rambut> {topic=random}
+
+    + kamu apa
+    - saya <bot pekerjaan>. {topic=random}
+
+    + siapa pengarang favorit [*]
+    - <bot pengarang>. {topic=random}
+
+    + siapa master [*] {weight=10}
+    - <bot master>. {topic=random}
+
+    + [*] yang buat kamu [*] {weight=10}
+    - <bot master>. {topic=random}
+
+
+
+
+    + *
+    - <emo="dont understand">maaf coba jelaskan apa maksud anda.
+    - <emo="i can">saya bisa menjelaskan website ini, tapi saya tidak mengerti maksud anda.
+    - <emo="please repeat">boleh diulangi?
+    - <emo="i dont get it">saya kurang mengerti. apa maksud anda?
+    - <emo="dont understand">saya kurang faham, tolong jelaskan
+    - <emo="confused">saya robot menjelaskan website ini, tanya saya dengan apa gunanya website ini.
+    - <emo="askme">anda bisa tanya saya tentang website ini.
+
+< topic
