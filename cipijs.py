@@ -105,7 +105,7 @@ def reply():
 
 
 @app.route("/tenor",methods=["POST"])
-def giphy():
+def tenor():
     params = request.json
     if not params:
         return jsonify({
