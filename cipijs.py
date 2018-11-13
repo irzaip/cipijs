@@ -21,7 +21,7 @@ bot.sort_replies()
 
 app = Flask(__name__)
 
-JS = "/cipijs"
+JS = ""
 
 @app.route('/favicon.ico')
 def favicon():

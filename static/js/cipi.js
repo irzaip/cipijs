@@ -13,8 +13,8 @@ var continous = false;
 var interim = false;
 let speak;
 var hwlength = 500; //panjang hotword.
-var url = 'http://localhost:5000/reply';
-var tenor = 'http://localhost:5000/tenor';
+//var url = 'http://localhost:5000/reply';
+//var tenor = 'http://localhost:5000/tenor';
 var key = '&k=M59QNHFYGEQQ';
 var query = '&q=';
 var result;
@@ -23,6 +23,8 @@ var speaking;
 const emo_regex = /(<emo="[a-z\s\D]*">)/gm;
 var gifme;
 var sit;
+let poseNet;
+let poses = [];
 
 function setup() {
     createCanvas(100,100).parent('canvascontainer');
@@ -62,13 +64,31 @@ function setup() {
     // button6 = createButton('postdata').parent('buttons');
     // button6.mousePressed(getReply)
     pg = createImage(256,256);
+
+
+    video = createCapture(VIDEO);
+    //video.size(width, height);
+
+
+    // Create a new poseNet method with a single detection
+    poseNet = ml5.poseNet(video, modelReady);
+    // This sets up an event that fills the global variable "poses"
+    // with an array every time new poses are detected
+    poseNet.on('pose', function(results) {
+    poses = results;
+    });    
+    video.hide();
 }
 
+function modelReady() {
+    select('#status').html('Model Loaded');
+  }
+
 let stateCheck = setInterval(() => {
-if (document.readyState === 'complete') {
-    clearInterval(stateCheck);
-    getReplyCMD("intro");
-}
+    if (document.readyState === 'complete') {
+        clearInterval(stateCheck);
+        getReplyCMD("intro");
+    }
 }, 100);
 
 function getResult(result){
@@ -126,6 +146,7 @@ function goSpeak(spk) {
     speak.onEnd = function () { speaking=false; }
     speak.speak(spk);
 }
+
 function goStartRecognize(){
     if (!listening) {
         try {
@@ -159,12 +180,12 @@ function draw(){
         filename = 'blo'+cc+'.bmp';
     }        
 
-    translate(50,50)
-    push()
-    bal = fft.g
+    translate(50,50);
+    push();
+    bal = fft.g;
     diam = map(vol, 0, 0.3, 10, 200);
-    ellipse(0, 0, diam, diam)
-    pop()
+    ellipse(0, 0, diam, diam);
+    pop();
 
     if (select('#status').html() === 'Listening...') {
         fill(55,0,55);
@@ -204,7 +225,7 @@ function draw(){
     }
     endShape();
 
-    pop()
+    pop();
 
     //Deteksi perubahan energy.
     nv = fft.getEnergy(400,2600);
@@ -219,7 +240,38 @@ function draw(){
         //stopRecord(); 
         drawspec(spectogram);    
     }
+    drawpose();
+    //if (poses) { console.log(poses);};
+// this is POSENET-
 }
+
+
+function drawpose() {
+    //imageMode(CORNER);
+    //image(video, 0, 0, width, height);
+
+    // We can call both functions to draw all keypoints and the skeletons
+    drawKeypoints();
+    //drawSkeleton();
+}
+
+// A function to draw ellipses over the detected keypoints
+function drawKeypoints()  {
+    // Loop through all the poses detected
+    for (let i = 0; i < poses.length; i++) {
+        // For each pose detected, loop through all the keypoints
+        let pose = poses[i].pose;
+        for (let j = 0; j < pose.keypoints.length; j++) {
+        // A keypoint is an object describing a body part (like rightArm or leftShoulder)
+        let keypoint = pose.keypoints[j];
+        // Only draw an ellipse is the pose probability is bigger than 0.2
+        if (poses[0].pose.keypoints[0].score > 0.2) {
+            console.log("nose detected");
+        }
+        }
+    }
+}
+  
 
 function drawspec(spectogram) {
     imageMode(CORNERS);
@@ -259,3 +311,4 @@ function playRecord() {
         console.log("Playing...");
     }
 }
+
