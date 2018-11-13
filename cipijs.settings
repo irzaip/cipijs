@@ -1,0 +1,7 @@
+
+# comment
+ENV='production'
+DEBUG=True
+
+TESIRZA='https://localhost:7800/test.html'
+JS='/cipijs'
