@@ -54,9 +54,18 @@ def favicon():
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
+@app.route('/')
+def index_def():
+    return render_template('index.html')
+
 @app.route('/<string:page_name>/')
 def static_page(page_name):
     return render_template('%s.html' % page_name)
+
+@app.route('/assets/<path:subpath>')
+def show_subpath(subpath):
+    # show the subpath after /path/
+    return send_from_directory('templates/assets/', subpath)
 
 @app.route("/reply", methods=["POST"])
 def reply():

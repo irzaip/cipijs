@@ -15,10 +15,21 @@
     + [*] (ya|iya|betul|ok|boleh|setuju) [*]
     - ok, mari kita bicara tentang website ini. ada yang ingin ditanyakan? {topic=website}
 
+    + (ya|iya|betul|ok|boleh|setuju) [*]
+    - ok, mari kita bicara tentang website ini. ada yang ingin ditanyakan? {topic=website}
+
     + enggak [*]
     - berarti tidak {topic=random}
     - tidak ya. {topic=random}
-    
+
+    + tidak [*]
+    - berarti tidak {topic=random}
+    - tidak ya. {topic=random}
+
+    + no [*]
+    - berarti tidak {topic=random}
+    - tidak ya. {topic=random}
+
     + [*] (tidak|enggak|no) [*] {weight=10}
     - anda menjawab tidak {topic=random}
     - baiklah, kita ngobrol apa jadinya? {topic=random}
