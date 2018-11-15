@@ -18,14 +18,16 @@
  *  Web Speech API: https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html
  *  Web Speech Recognition API: https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html
  */
+/*
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
     define('p5.speech', ['p5'], function (p5) { (factory(p5));});
   else if (typeof exports === 'object')
-    factory(require('../p5'));
+    factory(require('p5'));
   else
     factory(root['p5']);
 }(this, function (p5) {
+  */
 // =============================================================================
 //                         p5.Speech
 // =============================================================================
@@ -354,9 +356,13 @@
     }
   };
 
-}));
+
+
+
 
 /*
+
+}));
 todo:
 * fix callbacks (pause, resume) in synthesizer.
 * support speech grammar models for scoped auditory UI.

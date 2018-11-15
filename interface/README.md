@@ -1,6 +1,5 @@
 # INTERFACE
-<counter>
-</counter>
 
-<cipi>
-</cipi>
+<cipi></cipi>
+<counter></counter>
+

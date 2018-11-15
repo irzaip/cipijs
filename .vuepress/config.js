@@ -12,9 +12,9 @@ module.exports = {
         sidebar: {
             '/dokumentasi/': [
                 '',
-                'hulubalang',
-                'baperan',
-                'taggor'
+                'KaKaTa',
+                'BaPerAn',
+                'TaGGor'
             ]
         }
     }
