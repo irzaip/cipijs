@@ -25,9 +25,10 @@ var gifme;
 var sit;
 let poseNet;
 let poses = [];
+var humandetect = true;
 
 function setup() {
-    createCanvas(100,100).parent('canvascontainer');
+    createCanvas(100,100).parent('#icono');
 
     mic = new p5.AudioIn();
     mic.start();
@@ -105,7 +106,7 @@ function getResult(result){
     }
     emo_regex.exec("");  //reset regex
     console.log(str);
-    select("#reply").html(str);
+    select("#reply").html("Saya menjawab : " + str);
     goSpeak(str);
 }
 
@@ -139,6 +140,7 @@ function getReply() {
     var pesan = select('#transcribe').html().toLowerCase();
     postData = { message: pesan, username: "irzaip"};
     httpPost(url, 'json', postData, getResult, funcError);
+    select('#transcribe').html("Saya mendengar : " + pesan);
 }
 
 function goSpeak(spk) {
@@ -148,7 +150,7 @@ function goSpeak(spk) {
 }
 
 function goStartRecognize(){
-    if (!listening) {
+    if (!listening & humandetect) {
         try {
             spechR.start(continous, interim);
             select("#status").html("Recognizing..");
@@ -253,6 +255,7 @@ function drawpose() {
     // We can call both functions to draw all keypoints and the skeletons
     drawKeypoints();
     //drawSkeleton();
+
 }
 
 // A function to draw ellipses over the detected keypoints
@@ -265,9 +268,17 @@ function drawKeypoints()  {
         // A keypoint is an object describing a body part (like rightArm or leftShoulder)
         let keypoint = pose.keypoints[j];
         // Only draw an ellipse is the pose probability is bigger than 0.2
-        if (poses[0].pose.keypoints[0].score > 0.2) {
-            console.log("nose detected");
-        }
+        if (poses[0].pose.keypoints[0].score > 0.2 &
+            poses[0].pose.keypoints[1].score > 0.2 &
+            poses[0].pose.keypoints[2].score > 0.2 &
+            poses[0].pose.keypoints[3].score > 0.2 &
+            poses[0].pose.keypoints[4].score > 0.2) {
+                select("#visionstatus").html("Saya mendeteksi manusia, saya akan mencoba menjawab anda.");
+                humandetect = true;
+            } else {
+                select("#visionstatus").html("Saya tidak melihat manusia. Saya akan diam."); 
+                humandetect = false;
+            }
         }
     }
 }

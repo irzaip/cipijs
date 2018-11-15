@@ -19,6 +19,10 @@
     ^ bermacam-macam interface yang menggunakan bahasa indonesia\n 
     ^ sebagai antarmuka dengan komputer.
 
+    + [*] bagaimana [*]
+    - dengan langsung berbicara dengan bahasa indonesia, kami berusaha menjalankan perintah manusia.
+    - dengan cara menterjemahkan apa yang orang bilang. kami mencoba memahami.
+
     + [*] titanoboa [*]
     - <emo="titanoboa">Titanoboa adalah sejenis ular, digunakan menjadi nama website ini\n
     ^ berguna untuk merangkai bahasa sebagai antar-muka manusia dengan\n
@@ -32,7 +36,6 @@
     - <emo="connect">Anda akan berhubungan dengan website ini melalui suara yang biasa anda gunakan
     - <emo="language">Robot ini akan berhubungan dengan anda melalui bahasa indonesia.
     - <emo="robot">Nanti kita akan bikin sebuah robot yang besar sekali
-
 
     + [*] kontak [*]
     - <emo="irzaip">kontak pemilik website ini. yaitu Irza Pulungan
@@ -67,6 +70,10 @@
     - <emo="artificial intellegence">kadang manusia susah menggunakan atau mengendalikan robot, maka dengan interface ini akan menjadi mudah.
     - <emo="artificial intellegence">kadang komunikasi yang paling cepat dengan mesin adalah berbicara langsung kepadanya.
 
+    + [*] (tujuan|tujuannya) [*]
+    - <emo="purpose">Tujuan dari website ini adalah memajukan bahasa indonesia sebagai cara interface dengan mesin.
+    - <emo="purpose">Kami mempunyai tujuan memudahkan operasi mesin.
+
     + kapan *
     - <emo="when">sejak <star>
     - <emo="when">kami berusaha menghadirkan teknologi ini secepat mungkin
@@ -79,7 +86,7 @@
     - tidak dimana-mana
 
     + siapa [*]
-    - dia yang <star2>
+    - dia yang <star1>
     - <emo="irzaip">silahkan kontak irza pulungan
 
     + apa *
@@ -99,7 +106,12 @@
     - <emo="robot">kami memahami susahnya komunikasi dengan robot, oleh karena itu kami buat website ini.
     - <emo="robot">Robot akan kami hubungkan dengan bantuan teknologi bahasa manusia.
 
-    + (terima kasih|makasih)
+    + [*] terima kasih [*]{weight=10}
+    - <emo="thankyou">semoga bisa bermanfaat {topic=random}
+    - <emo="thankyou">Terima kasih kembali, datang lagi lain waktu{topic=random}
+    - <emo="thankyou">Sama-sama silahkan kembali lagi{topic=random}
+
+    + [*] makasih [*]{weight=10}
     - <emo="thankyou">semoga bisa bermanfaat {topic=random}
     - <emo="thankyou">Terima kasih kembali, datang lagi lain waktu{topic=random}
     - <emo="thankyou">Sama-sama silahkan kembali lagi{topic=random}
@@ -107,9 +119,26 @@
     + [*] bahasa [*]
     - bahasa indonesia akan kami gunakan sepenuhnya menggunakan pembelajaran mesin dan teknologi kecerdasan buatan
 
+    + [*] di mana [*]
+    - Lokasi menjadi tidak penting apabila anda menggunakan teknologi ini, yang penting ada internet.
+    - Teknologi ini bisa masuk ke dalam perangkat apa saja.
+    - Kami berusaha menghubungkan banyak mesin.
 
+    + [*] untuk apa [*]
+    - Untuk memudahkan pekerjaan manusia
+    - Untuk membantu manusia pada umumnya.
+    - Mempermudah pekerjaan
+    - Memudahkan komunikasi dengan manusia
 
-    + (siapa kamu|siapa nama kamu|siapa ini)
+    + [*] untuk siapa [*]
+    - Untuk manusia
+    - Untuk umat manusia
+    - Untuk kamu-kamu disini.
+
+    + [*] mengapa [*]
+    - Kami ingin mempermudah kehidupan, sehingga yang gaptek bisa menggunakan teknologi canggih.
+
+    + (siapa kamu|siapa nama kamu|siapa ini|nama kamu siapa)
     - saya <bot nama>.{topic=random}
     - kamu bisa panggil saya, <bot nama>.{topic=random}
 
@@ -141,7 +170,6 @@
     + [*] warna mata kamu [*] {weight=10}
     - warna mata saya <bot mata>. {topic=random}
 
-
     + [*] rupa kamu [*] {weight=10}
     - Mata saya <bot mata>, rambut saya <bot rambut> {topic=random}
 
@@ -157,8 +185,11 @@
     + [*] yang buat kamu [*] {weight=10}
     - <bot master>. {topic=random}
 
+    + [*] tentang [*]
+    - website ini berbicara tentang menggunakan bahasa indonesia.
 
-
+    + [*] bahasa indonesia [*]
+    - bahasa indonesia kami gunakan sebagai cara berkomunikasi dengan robot.
 
     + *
     - <emo="dont understand">maaf coba jelaskan apa maksud anda.

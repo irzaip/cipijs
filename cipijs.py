@@ -99,12 +99,16 @@ def reply():
         for key, value in uservars.items():
             bot.set_uservar(username, key, value)
 
+
     # Get a reply from the bot.
     reply = bot.reply(username, message)
 
     # Get all the user's vars back out of the bot to include in the response.
     uservars = bot.get_uservars(username)
 
+    print(message)
+    print(reply)
+    
     # Send the response.
     return jsonify({
         "status": "ok",
