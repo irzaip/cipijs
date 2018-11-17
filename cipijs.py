@@ -185,5 +185,13 @@ def tenor():
     else:
         return jsonify({})
 
+@app.route("/readlogs", methods=['GET'])
+def readlog():
+    curr = get_db().cursor()
+    curr.execute('select * from logs')
+    rdd = curr.fetchall()
+    return render_template('readlogs.html',rdd=rdd)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
