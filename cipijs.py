@@ -186,10 +186,12 @@ def tenor():
         return jsonify({})
 
 @app.route("/readlogs", methods=['GET'])
-def readlog():
-    curr = get_db().cursor()
-    curr.execute('select * from logs')
-    rdd = curr.fetchall()
+def readlogs():
+    cur = get_db().cursor()
+    cur.execute('select * from logs')
+    get_db().commit()
+    rdd = cur.fetchall()
+    get_db().close()
     return render_template('readlogs.html',rdd=rdd)
 
 
