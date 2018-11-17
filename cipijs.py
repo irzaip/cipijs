@@ -146,7 +146,7 @@ def reply():
     indata = (timenow, userid, ipaddr, message, reply, action)
     cur.execute("INSERT INTO logs VALUES (?,?,?,?,?,?)", indata)
     get_db().commit()
-
+    get_db().close()
     # Send the response.
     return jsonify({
         "status": "ok",
