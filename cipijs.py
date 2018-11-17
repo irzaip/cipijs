@@ -5,6 +5,8 @@
 import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
+import sqlite3
+import datetime
 
 from flask import Flask, request, Response, jsonify, render_template, send_from_directory
 import json
@@ -22,6 +24,11 @@ bot.load_directory(
     os.path.join(os.path.dirname(__file__), ".", "brain")
 )
 bot.sort_replies()
+
+import sqlite3
+from flask import g
+
+
 
 class ReverseProxied(object):
 
@@ -47,6 +54,22 @@ app.config.from_envvar('FLASK_SETTINGS_MODULE')
 app.wsgi_app = ReverseProxied(app.wsgi_app)
 
 print(app.config)
+
+
+DATABASE = './logger.db'
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+    return db
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
+
 
 @app.route('/favicon.ico')
 def favicon():
@@ -76,6 +99,9 @@ def reply():
     * message
     * vars
     """
+    #database init.
+    cur = get_db().cursor()
+
     params = request.json
     if not params:
         return jsonify({
@@ -108,7 +134,19 @@ def reply():
 
     print(message)
     print(reply)
-    
+    timenow = datetime.datetime.now()
+    userid = ""
+    action = ""
+
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ipaddr = request.environ['REMOTE_ADDR']
+    else:
+       ipaddr = request.environ['HTTP_X_FORWARDED_FOR'] #if behind proxy
+
+    indata = (timenow, userid, ipaddr, message, reply, action)
+    cur.execute("INSERT INTO logs VALUES (?,?,?,?,?,?)", indata)
+    get_db().commit()
+
     # Send the response.
     return jsonify({
         "status": "ok",
